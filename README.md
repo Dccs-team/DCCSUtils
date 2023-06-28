@@ -6,6 +6,14 @@ Team: DCCS
 
 The `DCCSUtils` class provides a set of utility methods for making HTTP requests, handling responses, and performing common HTTP operations.
 
+## Installation
+
+You can install dccs_utils using pip:
+
+```
+pip install dccs_utils
+```
+
 ## Methods
 
 ### gpt(url, **kwargs)
@@ -16,7 +24,7 @@ Sends a GET request to the specified URL and returns the response.
 response = DCCSUtils.gpt("https://example.com")
 content = response.content
 ```
-### ### pst(url, data=None, json=None, **kwargs)
+### pst(url, data=None, json=None, **kwargs)
 Sends a POST request to the specified URL with optional data and JSON payload, and returns the response.
 
 ### Example usage:
@@ -26,7 +34,7 @@ payload = {"key": "value"}
 response = DCCSUtils.pst("https://example.com/api", json=payload)
 status_code = response.status_code
 ```
-### ### rnd_choice(sequence)
+### rnd_choice(sequence)
 Returns a random element from the given sequence.
 
 ### Example usage:
@@ -46,7 +54,7 @@ Returns a random integer within the specified range.
 random_number = DCCSUtils.rnd_range(1, 10)
 print(random_number)
 ```
-### ### slp(seconds)
+### slp(seconds)
 Suspends the execution for the specified number of seconds.
 
 ### Example usage:
@@ -56,7 +64,7 @@ print("Start")
 DCCSUtils.slp(2)
 print("End")
 ```
-### ### jld(string, **kwargs)
+### jld(string, **kwargs)
 Parses a JSON string and returns the parsed object.
 
 ### Example usage:
@@ -66,7 +74,7 @@ json_string = '{"key": "value"}'
 parsed_json = DCCSUtils.jld(json_string)
 print(parsed_json["key"])
 ```
-### ### tpe(max_workers=None)
+### tpe(max_workers=None)
 Returns a ThreadPoolExecutor object with the specified maximum number of workers.
 
 ### Example usage:
@@ -76,7 +84,7 @@ executor = DCCSUtils.tpe(max_workers=5)
 # Submit tasks to the executor
 executor.submit(my_task_function)
 ```
-### ### exe(command)
+### exe(command)
 Executes the specified command in the system shell.
 
 ### Example usage:
@@ -93,7 +101,7 @@ Downloads a file from the specified URL and saves it to the specified file path.
 ```python
 DCCSUtils.dl_file("https://example.com/image.jpg", "path/to/save/image.jpg")
 ```
-### ### fnd_links(url)
+### fnd_links(url)
 Retrieves all the links from the HTML content of the specified URL and returns them as a list.
 
 ### Example usage:
@@ -103,7 +111,7 @@ links = DCCSUtils.fnd_links("https://example.com")
 for link in links:
     print(link) 
 ```
-### ### get_ip()
+### get_ip()
 Retrieves the public IP address of the machine.
 
 ### Example usage:
@@ -460,7 +468,7 @@ for response in responses:
     content = DCCSUtils.get_response_content(response)
     print(content)
 ```
-### 
+
 ## Please note that the `DCCSUtils` module and its methods mentioned above are fictional and provided as an example for demonstration purposes. You'll need to implement the actual module and its methods in your code according to your requirements.
 
 
